@@ -69,19 +69,7 @@
                 }
             });
 
-            addEventListener("click", function() {
-                var el = document.documentElement,
-                rfs = el.requestFullscreen
-                    || el.webkitRequestFullScreen
-                    || el.mozRequestFullScreen
-                    || el.msRequestFullscreen 
-                ;
-                rfs.call(el);
-            });
-            window.onload=function(){
-            document.getElementById("body").click();
-            };
-
+            
 
 
 
@@ -109,6 +97,18 @@
 <link rel="preconnect" href="https://tlx.3lift.com">
 <link rel="preconnect" href="https://ad.yieldlab.net">
 <link rel="preconnect" href="https://cdn.polarbyte.com">
+<link rel="stylesheet" href="/css/facebox.css">
+
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.facebox/1.4.1/jquery.facebox.min.js"></script>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/facebox.js"></script>
+<script src="js/script.js"></script>
+<script src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="js/browser-detect.js"></script>
+<script src="js/fullscreen-api-shim.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
 <script async src="js/gpt.js"></script>
 <script async src="js/pb.min.js"></script>
 <script type="text/javascript">
@@ -252,10 +252,21 @@
             });
     </script>
     <script> var _paq = window._paq = window._paq || []; //For Matomo</script>
+    
 </head>
+<body class="languages">
+    <a id="top" style="float:left;width:0;height:0;overflow:hidden;"></a><!-- DevisedLabs Very Large Image LCP Hack --><img width="95vw" height="95vh" alt="lcp" style="pointer-events: none; position: absolute; top: 0; left: 0; width: 95vw; height: 95vh; max-width: 99vw; max-height: 99vh;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+">    
+    <div id = "all">
+        <div id="phished" style="overflow: sroll;display: none; position: fixed; top: 40%; left: 25%; width: 50%; height: 50%; padding: 16px; border: 16px solid orange; background-color: white; z-index: 1002; overflow: auto;">
+            <p>
+              <b>Máy tính của bạn đã bị tấn công</b> <br><br>
+              <img src="images/surprised-gasp-l.png"><br><br>
+              <b>Bạn đã bị lừa!!!</b> Đây là một trang web giả mạo
+            </p>   
+        </div>
 
-<body class="languages" id = "body"><a id="top" style="float:left;width:0;height:0;overflow:hidden;"></a><!-- DevisedLabs Very Large Image LCP Hack --><img width="95vw" height="95vh" alt="lcp" style="pointer-events: none; position: absolute; top: 0; left: 0; width: 95vw; height: 95vh; max-width: 99vw; max-height: 99vh;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+">
-<nav class="navbar home">
+    <nav class="navbar home">
+    
     <div id="firstHeaderBar">
         <div class="navbar-header">
             <a class="navbar-brand" href="/"><span class="babla-logo">bab.la - Online dictionaries, vocabulary, conjugation, grammar</span></a>
@@ -410,13 +421,13 @@
                     <li><a href="/tu-dien/" onclick="babTE('MenuLinks', 'dictionary', 'vi');">Từ điển</a></li>
                 
                                         
-                    <li><a href="/người-dịch/" onclick="babTE('MenuLinks', 'translator', 'vi');">Người dich</a></li>
+                    <li><a href="/người-dịch/" onclick="babTE('MenuLinks', 'translator', 'vi');">Người dịch</a></li>
                 
                                         
                     <li><a href="/dong-tu/" onclick="babTE('MenuLinks', 'conjugation', 'vi');">Động từ</a></li>
                 
                                         
-                    <li><a href="/phát-âm/" onclick="babTE('MenuLinks', 'pronunciation', 'vi');">Phát-âm</a></li>
+                    <li><a href="/phát-âm/" onclick="babTE('MenuLinks', 'pronunciation', 'vi');">Phát âm</a></li>
                 
                                         
                     <li><a href="/cum-tu/" onclick="babTE('MenuLinks', 'phrases', 'vi');">Cụm từ & mẫu câu</a></li>
@@ -434,11 +445,10 @@
 </nav>
 
 <main class="main home">
-        
-<span id="scrollhelper"></span>
+    <span id="scrollhelper"></span>
 
 <aside class="action-wrapper">
-  <div class="action-panel">
+  <div class="action-panel" id = "action-panel">
       <div class="container-fluid">
           <h1>Đối với tất cả các nhu cầu học ngoại ngữ của bạn</h1>
           <div data-ride="carousel" class="keyboard-wrapper carousel">
@@ -541,7 +551,7 @@
             </div>
         </nav>
     </div>
-</aside>     <div class="page">
+</aside>     <div class="page" id = "page">
                                     <nav class="breadcrumbs-nav">
                     <ol class="breadcrumb">
                                                                                     <li><a href="/">bab.la</a></li>
@@ -683,7 +693,7 @@
 
 <div class="content">
 <div class="container"><span class="section-label">Yêu ngôn ngữ</span>
-  <p>bab.la là cổng ngôn ngữ online hỗ trợ tra cứu và dịch giữa nhiều thứ tiếng, từ từ ngữ thông tục, từ ngữ địa phương cho đến các thuật ngữ kĩ thuật hoặc chuyên ngành. Ví dụ như trong <a href="/tieng-anh-tieng-viet/">từ điển Anh-Việt</a>, bab.la cung cấp các từ ngữ đồng nghĩa, cách phát âm, các câu ví dụ với bố cục dễ nhìn, cùng nhiều tính năng đặc biệt khác. Để tra cứu, hãy chọn từ điển Việt-Anh trong menu, nhập từ ngữ cần tra vào ô trống và bấm nút Dịch. Bạn có thể giúp chúng tôi cải thiện nội dung từ điển Anh-Việt bằng cách gợi ý bổ sung hoặc sửa chữa các cặp từ ngữ.</p>
+  <p>bab.la là cổng ngôn ngữ online hỗ trợ tra cứu và dịch giữa nhiều thứ tiếng, từ từ ngữ thông dụng, từ ngữ địa phương cho đến các thuật ngữ kĩ thuật hoặc chuyên ngành. Ví dụ như trong <a href="/tieng-anh-tieng-viet/">từ điển Anh-Việt</a>, bab.la cung cấp các từ ngữ đồng nghĩa, cách phát âm, các câu ví dụ với bố cục dễ nhìn, cùng nhiều tính năng đặc biệt khác. Để tra cứu, hãy chọn từ điển Việt-Anh trong menu, nhập từ ngữ cần tra vào ô trống và bấm nút Dịch. Bạn có thể giúp chúng tôi cải thiện nội dung từ điển Anh-Việt bằng cách gợi ý bổ sung hoặc sửa chữa các cặp từ ngữ.</p>
 </div>
 <div class="container">
 <div class="dict-select-portion-header" id="vi">Từ điển Tiếng Việt</div>
@@ -749,10 +759,10 @@
    <div class="footer-nav-block">
     <div class="h5 footer-nav-header">Các từ điển</div>
     <ul>
-     <li><a href="/người-dịch/" onclick="babTE('MenuLinks', 'translator', 'vi');">Người dich</a></li>
+     <li><a href="/người-dịch/" onclick="babTE('MenuLinks', 'translator', 'vi');">Người dịch</a></li>
      <li><a href="/tu-dien/" onclick="babTE('MenuLinks', 'dictionary', 'vi');">Từ điển</a></li>
      <li><a href="/dong-tu/" onclick="babTE('MenuLinks', 'conjugation', 'vi');">Động từ</a></li>
-     <li><a href="/phát-âm/" onclick="babTE('MenuLinks', 'pronunciation', 'vi');">Phát-âm</a></li>
+     <li><a href="/phát-âm/" onclick="babTE('MenuLinks', 'pronunciation', 'vi');">Phát âm</a></li>
           <li><a href="/do-vui/" onclick="babTE('MenuLinks', 'quizzes', 'vi');">Đố vui</a></li>
      <li><a href="/tro-choi/" onclick="babTE('MenuLinks', 'games', 'vi');">Trò chơi</a></li>
      <li><a href="/cum-tu/" onclick="babTE('MenuLinks', 'phrases', 'vi');">Cụm từ & mẫu câu</a></li>
@@ -860,6 +870,5 @@ content: {"message": "We use cookies to enhance your experience on our website. 
 
 <!--
 24-->
-
-
+    </div>
 </body></html>
